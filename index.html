@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
+<link rel="stylesheet" href="./index.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <script src="https://kit.fontawesome.com/0adfa69bb8.js" crossorigin="anonymous"></script>
+ <script src="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></script>
   <title> E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,28 +25,99 @@
 </head>
 
 <body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-
-
+<div class="Navbar">
+  <div class="Navbar__Link Navbar__Link-brand">
+     Sneakers
+   </div>
+   <div class="Navbar__Link Navbar__Link-toggle">
+     <i class="fas fa-bars"></i>
+   </div>
+ <nav class="Navbar__Items">
+   <div class="Navbar__Link">
+     Collections
+   </div>
+   <div class="Navbar__Link">
+     Men
+   </div>
+   <div class="Navbar__Link">
+     Women
+   </div>
+   <div class="Navbar__Link">
+    About
+  </div>
+  <div class="Navbar__Link">
+    Contact
+  </div>
+ </nav>
+ <div class="myIcons">
+   <div class="Navbar__Link">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+   </div>
+   <div class="Navbar__Link">
+    <img src="./images/image-avatar.png" alt="user" height="25px" width="auto" style="border-radius: 20px;">
+   </div>
+ </div>
+</div>
+<!-- Create home page -->
+<div class="mainContent">
+  <div class="banner">
+<img src="./images/image-product-1.jpg" alt="image product 1">
+<div class="otherProd">
+<div class="prodOne">
+  <img src="./images/image-product-1-thumbnail.jpg" alt="" >
+</div>
+<div class="prodTwo">
+<img src="./images/image-product-2-thumbnail.jpg" alt="">
+</div>
+<div class="prodThree">
+  <img src="./images/image-product-3-thumbnail.jpg" alt="">
+</div>
+<div class="prodFour">
+  <img src="./images/image-product-4-thumbnail.jpg" alt="">
+</div>
+</div>
+  </div>
+  <div class="mainDetails">
+  <div>
+    <p class="title">SNEAKER COMPANY</p>
+    <h2>Fall Limited Edition Sneakers</h2>
+    <p class="pg">
+      These low-profile sneakers are your perfect casual wear companion. Featuring a
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+    </p>
+    <div class="amount">
+      <div class="newprice">
+        <div>
+          <p class="" style="font-size: larger; font-weight: bolder;">$125.00 <span style="background-color: rgb(250, 211, 139); margin-left: 3px; color: red;padding: 2px; font-size: smaller;">50%</span></p>
+        </div>
+      </div>
+  </div>
+  <div class="actual">
+ <p style="font-size: larger; font-weight: bolder; color:  rgb(75, 75, 75) ; text-decoration: line-through;">$250.00</p>   
+  </div>
+  <div class="update">
+  <div style="color: orange; font-size: 1.5rem;font-weight: bolder;cursor: pointer;">-</div>
+  <div style="font-size: 1.5rem; font-weight: bolder;">1</div>
+  <div style="color: orange; font-size: 1.5rem; font-weight: bolder;cursor: pointer;">+</div>
+  </div>
+  <div class="addCart">
+  <div>
+    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</p>
+  </div>
+  </div>
+</div>
+  </div>
+</div>
 </body>
+<script>
+  function classToggle() {
+  const navs = document.querySelectorAll('.Navbar__Items')
+  
+  navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+}
+
+document.querySelector('.Navbar__Link-toggle')
+  .addEventListener('click', classToggle);
+</script>
 
 </html>
